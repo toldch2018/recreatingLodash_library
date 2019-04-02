@@ -15,7 +15,7 @@ const _ = {
       },
      
    //Implement .inRange()
-      /*'num' is the number to check, 'start' is the
+      /*'number' is the number to check, 'start' is the
    start of the range and 'end' is the end of the range */
    inRange(number, start, end){
     if (end === undefined){
