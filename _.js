@@ -13,21 +13,24 @@ const _ = {
       return number;
     }
       },
-
+     
    //Implement .inRange()
-   /*'num' is the number to check, 'start' is the
+      /*'num' is the number to check, 'start' is the
    start of the range and 'end' is the end of the range */
-  inRange(num,start,end){
-    if (end === null){
-      end = start;
-      start = 0;
-    } else if(num < Math.min(start,end) || num > Math.max(start,end)){
-      return false;
-    } else {
-      return true;
+   inRange(number, start, end){
+    if (end === undefined){
+       end = start ;
+       start = 0;
+    } if(start > end){
+      let temp = end
+      end = start
+      start = temp
     }
-  },
+     let isInRange = start <= number && number < end;
+     return isInRange;
+   }, 
 
+  
     //Implement .words()
 
   words(string){
